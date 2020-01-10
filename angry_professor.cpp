@@ -1,34 +1,34 @@
 #include<iostream.h>
 #include<conio.h>
-#include<string.h>
-#include<stdio.h>
-#include<math.h>
-
-void main()
+int main()
 {
-	int count;
-	char s[81];
-	for(int i=0;i<81;i++)
-	{
-		cout<<s[i];
-		
-		if(s[i] == '\r\n')
-		{
-			break;
-		}
-		cin>>s[i];
-	}
-	for(i=0;i<strlen(s);i++)
-	{
-		if(s[i] != ' ' )
-		{
-			s[count++] = s[i];
-			s[count] = '\0';
-		}
-	}
-	for(i=0;i<strlen(s);i++)
-	{
-		cout<<s[i];
-	}
-getch();
+    int n,k,i,j,t,l,count=0;
+    cin>>t;
+    for(i=0;i<t;i++)
+    {   
+        cin>>n>>k;
+        int arr[n];
+        for(j=0;j<n;j++)
+        {
+            cin>>arr[j];
+        }
+    for(l=0;l<n;l++)
+    {
+        if(arr[l] <= 0)
+        {
+            count++;
+        }
+    }
+        if(count >= k)
+        {
+            cout<<"NO";
+        }
+        else 
+        {
+            cout<<"YES";
+        }
+        count = 0;
+        cout<<endl;
+    }
+    return 0;
 }
