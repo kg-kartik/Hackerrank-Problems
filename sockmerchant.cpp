@@ -1,26 +1,21 @@
 #include<iostream.h>
-#include<conio.h>
-int i,n,j,count,output;
-void main() {
+int main()
+{
+    long n,i,freq[101]={0};
+    long result=0;
     cin>>n;
-    int arr[10];
-    for(i =0;i<n;i++)
-    {
-        cin>>arr[i];
-    }
+    int a[n];
     for(i=0;i<n;i++)
     {
-        for(j=i+1;j<n;j++)
-        {
-            if(arr[i]==arr[j])
-            {
-                count++;
-            }
-        }
-        count = count/2;
-        cout<<count;
-        output = output+count;
-        count = 0;
+        cin>>a[i];
+        freq[a[i]]++;
     }
-    cout<<output;
+    for(i=0;i<101;i++)
+    {
+        if(freq[i]!=0){
+            result=result+(freq[i]/2);
+        }
+    }
+    cout<<result;
+    return 0;
 }
