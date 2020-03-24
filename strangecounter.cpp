@@ -1,7 +1,7 @@
 #include<iostream.h>
 int main()
 {
-    int t;
+    long t;
     cin>>t;
     long v=3;
     while(t>v)
