@@ -1,27 +1,18 @@
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
 int main()
 {
-    int t=0,n=0,m=0,s=0,i,j;
+    int t,i,j,n,m,s,result;
     cin>>t;
     for(i=0;i<t;i++)
     {
         cin>>n>>m>>s;
-        cout<<endl;
-    }
-    for(i=s;i<=i+m;i++)
-    {
-        if(i > n)
-        {
-            void check() {
-                for(i=0;i<m-(n-s);i++)
-                {
-                   cout<<i;
-                }
-            }
+        result = (m+s-1)%n;
+        if( result == 0) {
+            cout<<n<<endl;
         }
         else {
-            cout<<i+m;
+            cout<<result<<endl;
         }
     }
+    return 0;
 }
